@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <link href="https://fonts.googleapis.com/css?family=Girassol|Ubuntu&display=swap" rel="stylesheet">
+  <title>QuickMath</title>
+  </head>
+  <body>
+   <style>h1{
+text-align:center;
+font-family: 'Girassol', cursive;
+color:grey;
+}
+.submit{
+border:none;
+ background-color:#33cc33;
+  border-radius:25px;
+margin-left:650px;
+  
+}
+.submit:hover{
+background-color:green;
+cursor:pointer;
+  
+}
+div{
+
+background-color:white;
+ border-radius:25px;
+}
+h2{
+text-align:center;
+font-family: 'Ubuntu', sans-serif;
+  
+}
+body{
+background-image:url('checkerboard-cross.png');
+}
+p{
+font-family:Courier;
+text-align:center;
+  
+}
+form{
+margin-left:580px;
+}
+a{
+margin-top:2000px;
+}
+</style>
+    <script>
+    var x = 2;
+     function submit(){
+     var a= document.getElementsByName("answer")[0].value;
+      if(x==a){
+      x=x*2;
+      document.getElementById("question").innerHTML=x/2 +"+"+ x/2;
+      }else{
+      document.getElementById("question").innerHTML="Incorrect! Game Over!";
+      x=1;
+        
+      }
+     
+      }
+    </script>
+    <h1>QuickMath</h1>
+<h2>Try to solve as many math problems as possible!</h2>
+    <br>
+    <br>
+    <div>
+    <p id="question">1+1</p>
+    <br>
+    <br>
+    <form><input type="text" name="answer"></form>
+    <br>
+    <button class="submit" onclick="submit();">Submit</button>
+  
+  
+    </div>
+ <a href="https://wi-erd.blogspot.com">Wi-erd Home</a>
+  </body>
+</html>
